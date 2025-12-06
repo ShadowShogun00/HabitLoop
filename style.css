@@ -1,0 +1,119 @@
+/*CALENDER START*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.calendar {
+    display: grid;
+    width: 320px;
+    padding: 15px;
+    background: #e8f1ec;
+    border-radius: 16px;
+    margin-top: 200px;
+    margin-left: 35px ;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.nav-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.month-select, .year-select {
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.calendar-table th {
+    padding: 6px 0;
+    font-weight: bold;
+}
+
+.calendar-table td {
+    height: 32px;
+    padding: 6px 0;
+}
+
+.gray {
+    color: #999;
+}
+/*CALENDER END*/
+.calhabit{
+    display : flex;
+    flex-direction: row;
+    gap :20px;
+}
+/*NEW HABIT START*/
+.habits-box {
+    width: 1261px;
+    background: #E8F1EC;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    margin-top: 200px;
+    margin-left: 50px ;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.add-btn {
+    position: absolute;
+    top: 15px;
+    bottom: 10px;
+    right: 15px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: #147652;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    height: 30px;
+}
+
+.divider {
+    width: 96%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    top: 55px;
+}
+
+.habit-icon {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+/*NEW HABIT END*/
+
+/*HABIT FORM START*/
+.habit-form {
+align-self: center ;
+}

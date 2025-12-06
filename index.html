@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>HabitLoop</title>
+</head>
+<body>
+    <!--CALENDER START-->
+    <div class ="calhabit">
+<div class="calendar">
+
+    <div class="nav">
+        <button class="nav-btn"><</button>
+
+        <select class="month-select">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+
+        <select class="year-select">
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+        </select>
+
+        <button class="nav-btn">></button>
+    </div>
+
+    <table class="calendar-table">
+        <thead>
+            <tr>
+                <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+            </tr>
+            <tr>
+                <td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+            </tr>
+            <tr>
+                <td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+            </tr>
+            <tr>
+                <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+            </tr>
+            <tr>
+                <td>28</td><td>29</td><td>30</td><td class="gray">1</td><td class="gray">2</td><td class="gray">3</td><td class="gray">4</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<!--CALENDER END-->
+<!--NEW HABIT START-->
+<div class="habits-box">
+    <h2 class="title">HABITS</h2>
+    <button class="add-btn">+ New Habit</button>
+    <div class="divider"></div>
+</div>
+<div class = "habit-form">
+    <form>
+        <label for ="habit-name">Habit Name:</label>
+        <input type="textbox" id="habit-name" name="habit-name">
+        <button class="sub-btn">submit</button>
+        <button class="can-btn">cancel</button>
+    </form>
+</div>
+<!--NEW HABIT END-->
+</body>
+</html>
