@@ -8,7 +8,7 @@
 
 <div class="calhabit">
 
-    <!--CALENDER START-->
+    <!-- CALENDAR START -->
     <div class="calendar">
 
         <div class="nav">
@@ -55,26 +55,35 @@
         </table>
 
     </div>
-    <!--CALENDER END-->
+    <!-- CALENDAR END -->
 
-    <!--NEW HABIT START-->
+    <!-- NEW HABIT START -->
     <div class="habits-box">
         <h2 class="title">HABITS</h2>
         <button class="add-btn">+ New Habit</button>
         <div class="divider"></div>
+        <div class="habits-list">
+            <!-- Habit items will appear here -->
+        </div>
     </div>
-    <!--NEW HABIT END-->
+    <!-- NEW HABIT END -->
 
 </div> 
-    <div class="habit-form">
-        <form>
-            <div class="habit-name">
+
+<!-- HABIT FORM -->
+<div>
+    <form class="habit-form">
+        <div class="habit-name">
             <label for="habit-name" class="habit-nametext">Habit Name:</label>
-            <input type="textbox" id="habit-name" name="habit-name" placeholder="Enter the habit name">
-            </div>
-            <button class="sub-btn">submit</button>
-            <button class="can-btn">cancel</button>
-        </form>
-    </div>
+            <input type="text" id="habit-name" name="habit-name" placeholder="Enter the new habit">
+        </div>
+        <div class="habit-formbtn">
+            <button class="sub-btn">Submit</button>
+            <button class="can-btn">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

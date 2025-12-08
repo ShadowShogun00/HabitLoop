@@ -111,35 +111,60 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+.habits-list{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.habits-card{
+    border: #00c3ff 2px solid;
+}
 /*NEW HABIT END*/
-.habit-form{
+/*HABIT FORM START*/
+.habit-form {
     display: none;
     position: absolute;
-    width: 500px;
-    height: 300px;
-    background: #ff0000;
+    width: 400px;    
+    height: auto;
+    background: #00c3ff;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 22px;
+    padding: 20px;
 }
-.habit-name{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 25px;
-    margin: 50px;
-}
-#habit-name{
-    width: 450px;
+
+#habit-name {
+    width: 350px;
     height: 40px;
     border-radius: 8px;
     border: 0px solid #ccc;
     font-size: 1em;
     padding-left: 9px;
+    margin-bottom: 25px;
 }
 
-.habit-nametext{
+.habit-formbtn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sub-btn, .can-btn {
+    width: 80px;
+    height: 45px;
+    border-radius: 17px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 550;
+}
+
+.habit-nametext {
     display: none;
 }
-/*HABIT FORM START*/
+
+/*HABIT FORM END*/
 
