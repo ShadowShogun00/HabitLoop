@@ -167,4 +167,86 @@ body {
 }
 
 /*HABIT FORM END*/
+/*monthly progress start*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.monthlycontainer {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c2c2b;
+}
+
+/* Responsive Grid */
+.months-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Month Card */
+.month-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.month-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+.month-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c2c2b;
+}
+
+/* Progress Section */
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dots {
+    display: flex;
+    gap: 4px;
+}
+
+.dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d9d9d9;
+}
+
+.percent {
+    font-size: 14px;
+    color: #2c2c2b;
+}
+
+/*MONTHLY PROGRESS end*/
