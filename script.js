@@ -76,9 +76,9 @@ document.querySelector(".sub-btn").addEventListener("click", function(e) {
     document.querySelector(".habit-form").style.display = "none";
 });
 
-// ====== Habit Count & Checkbox Functions (unchanged) ======
+// ====== Habit Count & Checkbox Functions ======
 function habitCount(){
-    return document.querySelectorAll(".habits-card").length;
+    return document.querySelectorAll(".habits-card").length; //total habits count
 }
 
 function checkcount(){
@@ -88,11 +88,20 @@ function checkcount(){
         if(checkbox.checked) checkedCount++;
     });
     return checkedCount;
-}
+}// completed habit count
 
 function dailyhabitcomplete(){
     return habitCount() > 0 && habitCount() === checkcount();
 }
+
+//====== Daily Level Update ======
+function dailylevel(){
+    let percent = (checkcount() / habitCount()) * 100;
+    let filldiv = document.getElementById("fill");
+    filldiv.style.height = percent +"%";
+}
+
+
 
 // ====== Monthly Data ======
 function mothlydata() {
@@ -148,13 +157,38 @@ function attachCheckboxListeners(){
     checkboxs.forEach(checkbox => {
         checkbox.addEventListener("change", function(){
             mothlydata();
+            dailylevel();
         });
     });
 }
 
+// ====== Update Date Display ======
+ function updatedate() {
+    let today = new Date();
+    let date = today.getDate();
+
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    let day = weekday[today.getDay()];
+
+    const monthlist = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+    let month = monthlist[today.getMonth()];
+    let year = today.getFullYear();
+
+    document.querySelector("#date").textContent = date;
+    document.querySelector("#day").textContent = day;
+    document.querySelector("#month").textContent = month;
+    document.querySelector("#year").textContent = year;
+};
+  
+
 // ====== Initialize ======
 window.addEventListener("DOMContentLoaded", () => {
+    updatedate();
+    setInterval(updatedate, 86400000)
     loadhabitdata();
     renderHabits();
     mothlydata();
+    dailylevel();
 });
+
+

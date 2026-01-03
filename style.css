@@ -1,75 +1,75 @@
-/*CALENDER START*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.calendar {
-    display: grid;
-    width: 320px;
-    padding: 15px;
-    background: #e8f1ec;
-    border-radius: 16px;
-    margin-top: 200px;
-    margin-left: 35px ;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.nav-btn {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.month-select, .year-select {
-    padding: 4px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.calendar-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-.calendar-table th {
-    padding: 6px 0;
-    font-weight: bold;
-}
-
-.calendar-table td {
-    height: 32px;
-    padding: 6px 0;
-}
-
-.gray {
-    color: #999;
-}
-/*CALENDER END*/
 .calhabit{
     display : flex;
     flex-direction: row;
     gap :20px;
 }
+/*CALENDER START*/
+.calender{
+    width: 430px;
+    height: 401px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 50px ;
+    font-family: 'Poppins', sans-serif;
+    
+}
+#fill{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: #E8F1EC;
+    z-index: 1;
+}
+#left{
+    position: relative;
+    overflow: hidden;
+}
+#left p{
+    position: relative;
+    z-index: 2;
+}
+
+#left , #right{
+    background-color: #e6e6e5;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+#right{
+    background-color: #00c3ff;
+}
+
+#date{
+    font-weight: 200;
+    font-size: 7em;
+}
+#day{
+    font-size: 2em;
+    font-weight: 200;
+}
+#month{
+    font-size: 2em;
+    font-weight: 200;
+}
+#year{
+    font-size: 2em;
+    font-weight: 200;;
+}
+
+/*CALENDER END*/
+
 /*NEW HABIT START*/
 .habits-box {
     width: 1261px;
+    height: 401px;
     background: #E8F1EC;
     border-radius: 15px;
     padding: 20px;
@@ -114,13 +114,28 @@ body {
 
 .habits-list{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
     margin-top: 60px;
 }
 
 .habits-card{
-    border: #00c3ff 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+    padding: 7px;
+    width: 150px;
+    height: 30px;
+    font-size: 1.1em;
+    background-color: #bdbdbd;
+    border: none;
+    border-radius: 10px;
+}
+
+checkbox{
+    width: 50px;
+    height: 50px;
 }
 /*NEW HABIT END*/
 /*HABIT FORM START*/
