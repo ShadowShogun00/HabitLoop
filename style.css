@@ -1,9 +1,25 @@
-.calhabit{
-    display : flex;
-    flex-direction: row;
-    gap :20px;
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/*CALENDER START*/
+
+/* GLOBAL FONT */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+/* LAYOUT */
+.calhabit{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* ===== CALENDAR START ===== */
 .calender{
     width: 430px;
     height: 401px;
@@ -12,10 +28,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-    margin-left: 50px ;
-    font-family: 'Poppins', sans-serif;
-    
+    margin-left: 50px;
 }
+
 #fill{
     position: absolute;
     bottom: 0;
@@ -24,10 +39,12 @@
     background: #E8F1EC;
     z-index: 1;
 }
+
 #left{
     position: relative;
     overflow: hidden;
 }
+
 #left p{
     position: relative;
     z-index: 2;
@@ -43,6 +60,7 @@
     justify-content: center;
     gap: 8px;
 }
+
 #right{
     background-color: #00c3ff;
 }
@@ -51,22 +69,25 @@
     font-weight: 200;
     font-size: 7em;
 }
+
 #day{
     font-size: 2em;
     font-weight: 200;
 }
+
 #month{
     font-size: 2em;
     font-weight: 200;
 }
+
 #year{
     font-size: 2em;
-    font-weight: 200;;
+    font-weight: 200;
 }
+/* ===== CALENDAR END ===== */
 
-/*CALENDER END*/
 
-/*NEW HABIT START*/
+/* ===== HABITS BOX START ===== */
 .habits-box {
     width: 1261px;
     height: 401px;
@@ -75,18 +96,19 @@
     padding: 20px;
     position: relative;
     margin-top: 200px;
-    margin-left: 50px ;
+    margin-left: 50px;
 }
 
 .title {
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c2c2b;
 }
 
 .add-btn {
     position: absolute;
     top: 15px;
-    bottom: 10px;
     right: 15px;
     padding: 6px 10px;
     border-radius: 10px;
@@ -121,7 +143,6 @@
 
 .habits-card{
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 9px;
     padding: 7px;
@@ -129,21 +150,16 @@
     height: 30px;
     font-size: 1.1em;
     background-color: #bdbdbd;
-    border: none;
     border-radius: 10px;
 }
+/* ===== HABITS BOX END ===== */
 
-checkbox{
-    width: 50px;
-    height: 50px;
-}
-/*NEW HABIT END*/
-/*HABIT FORM START*/
+
+/* ===== HABIT FORM START ===== */
 .habit-form {
     display: none;
     position: absolute;
     width: 400px;    
-    height: auto;
     background: #00c3ff;
     top: 50%;
     left: 50%;
@@ -156,7 +172,7 @@ checkbox{
     width: 350px;
     height: 40px;
     border-radius: 8px;
-    border: 0px solid #ccc;
+    border: none;
     font-size: 1em;
     padding-left: 9px;
     margin-bottom: 25px;
@@ -176,46 +192,22 @@ checkbox{
     font-size: 1.1em;
     font-weight: 550;
 }
+/* ===== HABIT FORM END ===== */
 
-.habit-nametext {
-    display: none;
-}
 
-/*HABIT FORM END*/
-/*monthly progress start*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    padding: 20px;
-}
-
+/* ===== MONTHLY PROGRESS START ===== */
 .monthlycontainer {
     max-width: 1100px;
     margin: auto;
+    margin-top: 30px;
 }
 
-.title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #2c2c2b;
-}
-
-/* Responsive Grid */
 .months-grid {
     display: grid;
     gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Month Card */
 .month-card {
     background: white;
     padding: 16px;
@@ -240,7 +232,6 @@ body {
     color: #2c2c2b;
 }
 
-/* Progress Section */
 .progress {
     display: flex;
     align-items: center;
@@ -258,13 +249,13 @@ body {
     border-radius: 50%;
     background: #d9d9d9;
 }
+
 .dots span.active{
-    color: black;
+    background: black;
 }
 
 .percent {
     font-size: 14px;
     color: #2c2c2b;
 }
-
-/*MONTHLY PROGRESS end*/
+/* ===== MONTHLY PROGRESS END ===== */

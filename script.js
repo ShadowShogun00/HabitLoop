@@ -101,8 +101,6 @@ function dailylevel(){
     filldiv.style.height = percent +"%";
 }
 
-
-
 // ====== Monthly Data ======
 function mothlydata() {
     let today = new Date();
@@ -151,9 +149,9 @@ function mothlydata() {
     percentText.textContent = percent + "%";
 }
 
-// ====== Attach checkbox listeners ======
+// ====== Attach checkbox listeners ====== 
 function attachCheckboxListeners(){
-    let checkboxs = document.querySelectorAll(".habit-checkbox");
+    let checkboxs = document.querySelectorAll(".habit-checkbox"); // sekect all the checkbox and check if it is changed and pass the appropriate info further
     checkboxs.forEach(checkbox => {
         checkbox.addEventListener("change", function(){
             mothlydata();
@@ -179,13 +177,48 @@ function attachCheckboxListeners(){
     document.querySelector("#month").textContent = month;
     document.querySelector("#year").textContent = year;
 };
-  
+// ====== gets today date ======
+function todayDate(){
+    let t = new Date();
+    let date = t.getDate();
+    let month = t.getMonth();
+    let year = t.getFullYear();
+
+    return `${year}-${String(month + 1).padStart(2,"0")}-${String(date).padStart(2,"0")}`;
+}
+
+// ====== gets last active date ======
+function lastactivedate(){
+    let t = new Date();
+    let date = t.getDate();
+    let month = t.getMonth();
+    let year = t.getFullYear();
+
+    let lastdate = `${year}-${String(month + 1).padStart(2,"0")}-${String(date).padStart(2,"0")}`;
+    localStorage.setItem("lastactive",lastdate);
+
+}
+
+// ====== reset the habit at midnight and store todays date ======
+function resetatmidnight(){
+    let today = todayDate();
+    let lastactive = localStorage.getItem("lastactive");
+
+    if(today != lastactive){
+        let checksq = document.querySelectorAll(".habit-checkbox");
+        checksq.forEach(checkox => {
+            checkox.checked = false;
+        })
+        localStorage.setItem("lastactive",today);
+    }
+}
 
 // ====== Initialize ======
 window.addEventListener("DOMContentLoaded", () => {
     updatedate();
-    setInterval(updatedate, 86400000)
+    setInterval(updatedate, 86400000);
     loadhabitdata();
+    resetatmidnight();
     renderHabits();
     mothlydata();
     dailylevel();
