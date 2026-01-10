@@ -1,0 +1,8 @@
+background-image: linear-gradient(45deg, #ffffff, #ebe7e5, #d7cfcc, #c3b8b4) // css for background
+add a delete button
+depoy it
+make it look better almost everything works perfectly
+make everything connect with each other
+make it responsive
+give the title 
+try and add a todo list type of thing
